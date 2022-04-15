@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <title>Light Client</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css"
+          type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="mapInteractive">
+    <section class="interact">
+        <header>
+            <h4>Let's go biking</h4>
+        </header>
+        <div class="form-input">
+            <input type="text" placeholder="Départ" class="startLocation"/>
+            <input type="text" placeholder="Destination" class="endLocation">
+        </div>
+        <div class="address-select">
+            <h5 id="result-label">Votre recherche</h5>
+            <div id="address-select-list">
+            </div>
+        </div>
+        <input type="button" class="btn-classic" value="Rechercher le trajet" id="searchTravel">
+    </section>
+    <div class="map">
+        <div id="map">
+        </div>
+        <div class="card-station-template hidden">
+            <div>
+                <span class="badge-valid">OPEN</span>
+            </div>
+            <div>
+                <h5>Station titre</h5>
+                <p>Description de la station</p>
+            </div>
+            <div>
+                <h6>Vélos disponibles</h6>
+                <div class="card-station-bike-bar">
+                    <div class="card-station-bike-bar-item">
+                        <img src="assets/bicycle-solid.svg" width="24" alt="Bike logo">
+                        <p class="badge-info" id="badge-info-bike">5</p>
+                    </div>
+                    <div class="card-station-bike-bar-item">
+                        <img src="assets/bolt-solid.svg" width="16" alt="Bike logo">
+                        <p class="badge-info" id="badge-info-electricbike">2</p>
+                    </div>
+                    <div class="card-station-bike-bar-item">
+                        <img src="assets/grip-lines-vertical-solid.svg" width="24" height="24" alt="Bike logo">
+                        <p class="badge-info" id="badge-info-parking">2</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="cards" id="cards">
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+<script type="module" src="input.js"></script>
+<script type="module" src="scriptMap.js"></script>
+</body>
+</html>

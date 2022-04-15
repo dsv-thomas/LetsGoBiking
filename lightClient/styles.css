@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+
+}
+
+input {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+input {
+    border-radius: 5px;
+    border: 0;
+    outline: none;
+}
+
+#map {
+    width: 70vw;
+    height: 100vh;
+}
+
+.mapInteractive {
+    display: flex;
+
+}
+
+.ol-attribution button, .ol-attribution ul {
+    display: none !important;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #007ea7;
+
+}
+
+.interact {
+    background-color: #F6F6F6;
+    width: 30vw;
+    height: 100vh;
+    padding: 1em;
+}
+
+.address-select {
+    width: 100%;
+}
+
+.address-select-item-icon {
+    margin-right: 2em;
+}
+.address-select-item p {
+    margin: 0;
+}
+
+.address-select-item p:nth-child(2) {
+    color: gray;
+}
+
+.address-select-item {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    background-color: #FCFCFC;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-bottom: 1em;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.address-select-item:hover {
+    background-color: #FFFFFF;
+}
+
+.map {
+    width: 70vw;
+    height: 100vh;
+    position: relative;
+}
+
+.btn-classic {
+    width: 100%;
+    padding: 1em;
+    background-color: #007ea7;
+    color: white;
+    cursor: pointer;
+}
+
+.cards {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 50;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-station {
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    width: 25vw;
+    height: 160px;
+    margin: 2em;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-station h5 {
+    font-weight: 900;
+    font-size: 1.5em;
+    margin: 0;
+    vertical-align: middle;
+    color: #007ea7;
+}
+
+.card-station h6 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.card-station p {
+    font-size: 1em;
+    margin: 0;
+}
+
+.badge-valid {
+    background-color: #63d471;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.badge-info {
+    background-color: #007ea7;
+    color: #F6F6F6;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+.card-station-bike-bar-item {
+    display: inline-flex;
+    vertical-align: middle;
+    align-self: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.card-station-bike-bar {
+    display: flex;
+    gap: 1em;
+
+}
+
+.bar {
+    width: 0.3em;
+    height: 1.5em;
+    color: #007ea7;
+    background-color: #007ea7;
+}

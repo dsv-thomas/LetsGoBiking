@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="RoutingGB" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Routing" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Routing.models" />
+      <xsd:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRoutingGB_GetClosestStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosestStation" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_GetClosestStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClosestStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_getAllStation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStation" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_getAllStation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllStationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_getRoute_InputMessage">
+    <wsdl:part name="parameters" element="tns:getRoute" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_getRoute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_convert_InputMessage">
+    <wsdl:part name="parameters" element="tns:convert" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_convert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:convertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_travel_InputMessage">
+    <wsdl:part name="parameters" element="tns:travel" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_travel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:travelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_test_InputMessage">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="IRoutingGB_test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRoutingGB">
+    <wsdl:operation name="GetClosestStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/GetClosestStation" message="tns:IRoutingGB_GetClosestStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/GetClosestStationResponse" message="tns:IRoutingGB_GetClosestStation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllStation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/getAllStation" message="tns:IRoutingGB_getAllStation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/getAllStationResponse" message="tns:IRoutingGB_getAllStation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getRoute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/getRoute" message="tns:IRoutingGB_getRoute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/getRouteResponse" message="tns:IRoutingGB_getRoute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="convert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/convert" message="tns:IRoutingGB_convert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/convertResponse" message="tns:IRoutingGB_convert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="travel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/travel" message="tns:IRoutingGB_travel_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/travelResponse" message="tns:IRoutingGB_travel_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/test" message="tns:IRoutingGB_test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/testResponse" message="tns:IRoutingGB_test_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IRoutingGB" type="tns:IRoutingGB">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClosestStation">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/GetClosestStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllStation">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/getAllStation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRoute">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/getRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="convert">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/convert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="travel">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/travel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RoutingGB">
+    <wsdl:port name="BasicHttpBinding_IRoutingGB" binding="tns:BasicHttpBinding_IRoutingGB">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/Routing/Service1/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

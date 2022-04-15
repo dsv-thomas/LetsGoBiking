@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Routing.models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Routing.models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Routing" />
+  <xs:complexType name="GeoJson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="features" nillable="true" type="tns:ArrayOfFeature" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bbox" nillable="true" type="q1:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="metadata" nillable="true" type="tns:Metadata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeoJson" nillable="true" type="tns:GeoJson" />
+  <xs:complexType name="ArrayOfFeature">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Feature" nillable="true" type="tns:Feature" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFeature" nillable="true" type="tns:ArrayOfFeature" />
+  <xs:complexType name="Feature">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="bbox" nillable="true" type="q2:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="properties" nillable="true" type="tns:Properties" />
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:Geometry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Feature" nillable="true" type="tns:Feature" />
+  <xs:complexType name="Properties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="segments" nillable="true" type="tns:ArrayOfSegment" />
+      <xs:element minOccurs="0" name="extras" nillable="true" type="tns:Extras" />
+      <xs:element minOccurs="0" name="warnings" nillable="true" type="tns:ArrayOfWarning" />
+      <xs:element minOccurs="0" name="summary" nillable="true" type="tns:Summary" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="way_points" nillable="true" type="q3:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Properties" nillable="true" type="tns:Properties" />
+  <xs:complexType name="ArrayOfSegment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Segment" nillable="true" type="tns:Segment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSegment" nillable="true" type="tns:ArrayOfSegment" />
+  <xs:complexType name="Segment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" type="xs:double" />
+      <xs:element minOccurs="0" name="duration" type="xs:double" />
+      <xs:element minOccurs="0" name="steps" nillable="true" type="tns:ArrayOfStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Segment" nillable="true" type="tns:Segment" />
+  <xs:complexType name="ArrayOfStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Step" nillable="true" type="tns:Step" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStep" nillable="true" type="tns:ArrayOfStep" />
+  <xs:complexType name="Step">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="distance" type="xs:double" />
+      <xs:element minOccurs="0" name="duration" type="xs:double" />
+      <xs:element minOccurs="0" name="type" type="xs:int" />
+      <xs:element minOccurs="0" name="instruction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="way_points" nillable="true" type="q4:ArrayOfint" />
+      <xs:element minOccurs="0" name="exit_number" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Step" nillable="true" type="tns:Step" />
+  <xs:complexType name="Extras">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="roadaccessrestrictions" nillable="true" type="tns:Roadaccessrestrictions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Extras" nillable="true" type="tns:Extras" />
+  <xs:complexType name="Roadaccessrestrictions">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="values" nillable="true" type="q5:ArrayOfArrayOfint" />
+      <xs:element minOccurs="0" name="summary" nillable="true" type="tns:ArrayOfSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Roadaccessrestrictions" nillable="true" type="tns:Roadaccessrestrictions" />
+  <xs:complexType name="ArrayOfSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Summary" nillable="true" type="tns:Summary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSummary" nillable="true" type="tns:ArrayOfSummary" />
+  <xs:complexType name="Summary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="value" type="xs:double" />
+      <xs:element minOccurs="0" name="distance" type="xs:double" />
+      <xs:element minOccurs="0" name="amount" type="xs:double" />
+      <xs:element minOccurs="0" name="duration" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Summary" nillable="true" type="tns:Summary" />
+  <xs:complexType name="ArrayOfWarning">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Warning" nillable="true" type="tns:Warning" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarning" nillable="true" type="tns:ArrayOfWarning" />
+  <xs:complexType name="Warning">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="xs:int" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Warning" nillable="true" type="tns:Warning" />
+  <xs:complexType name="Geometry">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q6:ArrayOfArrayOfdouble" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Geometry" nillable="true" type="tns:Geometry" />
+  <xs:complexType name="Metadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attribution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="service" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="timestamp" type="xs:long" />
+      <xs:element minOccurs="0" name="query" nillable="true" type="tns:Query" />
+      <xs:element minOccurs="0" name="engine" nillable="true" type="tns:Engine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Metadata" nillable="true" type="tns:Metadata" />
+  <xs:complexType name="Query">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q7:ArrayOfArrayOfdouble" />
+      <xs:element minOccurs="0" name="profile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="format" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Query" nillable="true" type="tns:Query" />
+  <xs:complexType name="Engine">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="build_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="graph_date" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Engine" nillable="true" type="tns:Engine" />
+  <xs:complexType name="ArrayOfConvertResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConvertResult" nillable="true" type="tns:ConvertResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConvertResult" nillable="true" type="tns:ArrayOfConvertResult" />
+  <xs:complexType name="ConvertResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:GeometryAddr" />
+      <xs:element minOccurs="0" name="properties" nillable="true" type="tns:PropertiesAddr" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConvertResult" nillable="true" type="tns:ConvertResult" />
+  <xs:complexType name="GeometryAddr">
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q8:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeometryAddr" nillable="true" type="tns:GeometryAddr" />
+  <xs:complexType name="PropertiesAddr">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="citycode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="context" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="housenumber" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="importance" type="xs:double" />
+      <xs:element minOccurs="0" name="label" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="postcode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="score" type="xs:double" />
+      <xs:element minOccurs="0" name="street" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="x" type="xs:double" />
+      <xs:element minOccurs="0" name="y" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PropertiesAddr" nillable="true" type="tns:PropertiesAddr" />
+  <xs:complexType name="Travel">
+    <xs:sequence>
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="PositionEnd" nillable="true" type="q9:Position" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="PositionStart" nillable="true" type="q10:Position" />
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="stationEnd" nillable="true" type="q11:Station" />
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="stationStart" nillable="true" type="q12:Station" />
+      <xs:element minOccurs="0" name="travelChoice" nillable="true" type="tns:GeoJson" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Travel" nillable="true" type="tns:Travel" />
+</xs:schema>

@@ -1,0 +1,11 @@
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\bin\Debug\LetsgobikingHeavyClient.exe.config
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\bin\Debug\LetsgobikingHeavyClient.exe
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\bin\Debug\LetsgobikingHeavyClient.pdb
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.csproj.AssemblyReference.cache
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.csproj.SuggestedBindingRedirects.cache
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.Form1.resources
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.Properties.Resources.resources
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.csproj.GenerateResource.cache
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.exe
+C:\Users\Thomas\Documents\Polytech\S8\SOC\ConsoleApp_for_Self_Hosted_WS\LetsgobikingHeavyClient\LetsgobikingHeavyClient\obj\Debug\LetsgobikingHeavyClient.pdb
