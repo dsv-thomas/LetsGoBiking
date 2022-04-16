@@ -28,6 +28,18 @@ namespace ProxyCache
         List<Station> GetStations();
 
         [OperationContract]
+        [WebInvoke
+            (
+                Method = "GET",
+                UriTemplate = "station?StationId={StationId}",
+                RequestFormat = WebMessageFormat.Json,
+                BodyStyle = WebMessageBodyStyle.Bare,
+                ResponseFormat = WebMessageFormat.Json
+            )
+        ]
+        Station GetStationId(int StationId);
+
+        [OperationContract]
         [WebInvoke(
         Method = "GET",
         UriTemplate = "convert?address={address}",

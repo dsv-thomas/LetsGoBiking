@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Globalization;
+using System.Linq;
 using System.ServiceModel.Web;
 
 namespace Routing
@@ -15,7 +16,7 @@ namespace Routing
         private static JCDecaux jcDecaux = new JCDecaux();
         private static Openrouteservice openrouteservice = new Openrouteservice();
         private static ApiAdresse apiAdresse = new ApiAdresse();
-        private List<Station> stationsFresh = jcDecaux.GetStations().Result;
+        private List<Station> stationsLongCache = jcDecaux.GetStations().Result;
 
         public RoutingGB()
         {
@@ -23,26 +24,28 @@ namespace Routing
             WebOperationContext.Current.OutgoingRequest.Headers.Add("Access-Control-Allow-Origin", "*");
         }
 
-        public Station GetClosestStation(Double longitude, Double latitude)
+
+
+        public Station GetClosestStation(Double longitude, Double latitude, bool isArrival)
         {
             GeoCoordinate initialPosition = new GeoCoordinate(longitude, latitude);
-            double distanceMin = Double.MaxValue;
-            Station minRoot = stationsFresh[0];
-            foreach (Station root in stationsFresh)
+            Station minRoot = stationsLongCache[0];
+            foreach (Station root in stationsLongCache.OrderBy(test => new GeoCoordinate(test.position.latitude, test.position.longitude).GetDistanceTo(initialPosition)))
             {
-                if(root.status == "OPEN" && root.totalStands.availabilities.bikes >= 1)
-                {
-                    GeoCoordinate geo = new GeoCoordinate(root.position.latitude, root.position.longitude);
-                    double distance = geo.GetDistanceTo(initialPosition);
-                    if (distance <= distanceMin)
-                    {
-                        distanceMin = distance;
-                        minRoot = root;
-                    }
-                }
-                
+
+               if(isValidStation(root.number, isArrival))
+               {
+                    return root;
+               }
+
             }
             return minRoot;
+        }
+
+        public Boolean isValidStation(int stationId, bool isArrival)
+        {
+            Station station = jcDecaux.GetStation(stationId).Result;
+            return station.status == "OPEN" && (!isArrival && station.totalStands.availabilities.bikes >= 1) || (isArrival && station.totalStands.availabilities.stands >= 1);
         }
 
         public Travel travel(String startPoint, String endPoint)
@@ -51,12 +54,12 @@ namespace Routing
             string[] P2 = endPoint.Split(',');
             Position position = new Position(Convert.ToDouble(P1[0], CultureInfo.InvariantCulture), Convert.ToDouble(P1[1], CultureInfo.InvariantCulture));
             Position position2 = new Position(Convert.ToDouble(P2[0], CultureInfo.InvariantCulture), Convert.ToDouble(P2[1], CultureInfo.InvariantCulture));
-            Station startSation = GetClosestStation(position.longitude, position.latitude);
-            Station endSation = GetClosestStation(position2.longitude, position2.latitude);
+            Station startSation = GetClosestStation(position.longitude, position.latitude, false);
+            Station endSation = GetClosestStation(position2.longitude, position2.latitude, true);
 
             GeoJson walkingTravel = getRoute(startPoint, endPoint, "foot-walking");
             GeoJson cyclingTravel = getRoute((startSation.position.longitude.ToString().Replace(",", ".") + "," + startSation.position.latitude.ToString().Replace(",", ".")), (endSation.position.longitude.ToString().Replace(",", ".") + "," + endSation.position.latitude.ToString().Replace(",", ".")), "cycling-regular");
-            
+
             GeoJson toStation = getRoute(startPoint, (startSation.position.longitude.ToString().Replace(",", ".") + "," + startSation.position.latitude.ToString().Replace(",", ".")), "foot-walking");
             GeoJson toEnd = getRoute((endSation.position.longitude.ToString().Replace(",", ".") + "," + endSation.position.latitude.ToString().Replace(",", ".")), endPoint, "foot-walking");
 
@@ -72,7 +75,7 @@ namespace Routing
 
         public List<Station> getAllStation()
         {
-            return stationsFresh;
+            return stationsLongCache;
         }
 
         public GeoJson getRoute(String llP1, String llP2, String profile)
@@ -95,5 +98,6 @@ namespace Routing
         {
             return apiAdresse.convertAddress(address).Result;
         }
+
     }
 }

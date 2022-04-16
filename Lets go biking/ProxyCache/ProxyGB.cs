@@ -11,7 +11,7 @@ namespace ProxyCache
         private readonly static Cache<JCDecauxItem> cacheJCDecaux = new Cache<JCDecauxItem>();
         private readonly static Cache<ApiAdresseItem> cacheApiAdresse = new Cache<ApiAdresseItem>();
         private readonly double EXPIRATION_TIME = 60;
-        private readonly double EXPIRATION_TIME_LONG = 60;
+        private readonly double EXPIRATION_TIME_LONG = 3600;
 
         public ProxyGB()
         {
@@ -21,7 +21,14 @@ namespace ProxyCache
 
         public List<Station> GetStations()
         {
-            return cacheJCDecaux.Get("/stations", EXPIRATION_TIME).stations;
+            return cacheJCDecaux.Get("/stations", EXPIRATION_TIME_LONG).stations;
+        }
+
+        public Station GetStationId(int StationId)
+        {
+            Dictionary<String, String> map = new Dictionary<String, String>();
+            map.Add("stationId", StationId.ToString());
+            return cacheJCDecaux.Get("/stations/" + StationId.ToString() + "?contract=lyon", EXPIRATION_TIME, map).station;
         }
 
         public List<FeatureAddr> convert(String address)

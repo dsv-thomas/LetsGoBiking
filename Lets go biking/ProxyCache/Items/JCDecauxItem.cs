@@ -18,10 +18,20 @@ namespace ProxyCache
         [DataMember]
         public List<Station> stations { get; set; }
 
+        [DataMember]
+        public Station station { get; set; }
+
+
         public JCDecauxItem()
         {
             stations = GetStations().Result;
         }
+
+        public JCDecauxItem(Dictionary<String, String> map)
+        {
+            station = GetStation(int.Parse(map["stationId"])).Result;
+        }
+
 
         public async Task<List<Station>> GetStations()
         {
@@ -35,6 +45,20 @@ namespace ProxyCache
             };
 
             return JsonConvert.DeserializeObject<List<Station>>(responseBody, settings);
+        }
+
+        public async Task<Station> GetStation(int StationId)
+        {
+            HttpResponseMessage response = await client.GetAsync("https://api.jcdecaux.com/vls/v3/stations/"+StationId + "?contract=lyon&apiKey=" + apiKey);
+            response.EnsureSuccessStatusCode();
+            string responseBody = await response.Content.ReadAsStringAsync();
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            };
+
+            return JsonConvert.DeserializeObject<Station>(responseBody, settings);
         }
     }
 

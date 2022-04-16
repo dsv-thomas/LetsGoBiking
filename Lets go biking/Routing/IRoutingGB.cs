@@ -11,17 +11,7 @@ namespace Routing
     [ServiceContract]
     public interface IRoutingGB
     {
-        [OperationContract]
-        [WebInvoke
-            (
-                Method = "GET",
-                UriTemplate = "closeststation?longitude={longitude}&latitude={latitude}",
-                RequestFormat = WebMessageFormat.Json,
-                BodyStyle = WebMessageBodyStyle.Wrapped,
-                ResponseFormat = WebMessageFormat.Json
-            )
-        ]
-        Station GetClosestStation(Double longitude, Double latitude);
+
 
         [OperationContract]
         [WebInvoke

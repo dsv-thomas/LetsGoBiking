@@ -10,7 +10,6 @@ namespace Routing.externalServices
 {
     class JCDecaux
     {
-        string apiKey = "079e5c452a49c4c91275b1be1e96300f1194190a";
         static readonly HttpClient client = new HttpClient();
         public async Task<List<Station>> GetStations()
         {
@@ -24,6 +23,20 @@ namespace Routing.externalServices
             };
 
             return JsonConvert.DeserializeObject<List<Station>>(responseBody, settings);
+        }
+
+        public async Task<Station> GetStation(int stationId)
+        {
+            HttpResponseMessage response = await client.GetAsync("http://localhost:8735/Design_Time_Addresses/ProxyCache/Service1/rest/station?stationId="+stationId);
+            response.EnsureSuccessStatusCode();
+            string responseBody = await response.Content.ReadAsStringAsync();
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                MissingMemberHandling = MissingMemberHandling.Ignore
+            };
+
+            return JsonConvert.DeserializeObject<Station>(responseBody, settings);
         }
     }
 }
