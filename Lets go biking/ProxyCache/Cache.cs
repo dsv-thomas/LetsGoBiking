@@ -5,7 +5,7 @@ using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProxyCache
+namespace ProxyCache.Cache
 {
     internal class Cache<T> : ICache<T> where T : new()
     {

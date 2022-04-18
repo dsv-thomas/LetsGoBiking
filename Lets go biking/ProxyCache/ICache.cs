@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ProxyCache
+namespace ProxyCache.Cache
 {
     public interface ICache<T>
     {

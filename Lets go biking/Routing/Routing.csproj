@@ -58,6 +58,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Program.cs" />
     <Compile Include="externalServices\ApiAdresse.cs" />
     <Compile Include="externalServices\Openrouteservice.cs" />
     <Compile Include="externalServices\JCDecaux.cs" />

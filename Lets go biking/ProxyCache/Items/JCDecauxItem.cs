@@ -7,7 +7,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProxyCache
+namespace ProxyCache.Items
 {
     internal class JCDecauxItem
     {

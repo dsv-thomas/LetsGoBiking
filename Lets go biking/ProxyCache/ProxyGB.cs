@@ -1,10 +1,12 @@
-﻿using ProxyCache.Items;
+﻿using ProxyCache.Cache;
+using ProxyCache.Items;
 using System;
 using System.Collections.Generic;
 using System.ServiceModel.Web;
 
 namespace ProxyCache
 {
+
     public class ProxyGB : IProxyGB
     {
 
