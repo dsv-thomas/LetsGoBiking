@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Routing" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Routing" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/Design_Time_Addresses/Routing/Service1/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Routing.models" />
   <xs:complexType name="Station">
     <xs:sequence>
       <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
@@ -43,4 +44,18 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ArrayOfStation" nillable="true" type="tns:ArrayOfStation" />
+  <xs:complexType name="ArrayOfConvertResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConvertResult" nillable="true" type="tns:ConvertResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConvertResult" nillable="true" type="tns:ArrayOfConvertResult" />
+  <xs:complexType name="ConvertResult">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Routing.models" minOccurs="0" name="geometry" nillable="true" type="q1:GeometryAddr" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Routing.models" minOccurs="0" name="properties" nillable="true" type="q2:PropertiesAddr" />
+      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConvertResult" nillable="true" type="tns:ConvertResult" />
 </xs:schema>

@@ -12,6 +12,18 @@ namespace Routing
     public interface IRoutingGB
     {
 
+        [OperationContract]
+        [WebInvoke
+            (
+                Method = "GET",
+                UriTemplate = "closeststation?longitude={longitude}&latitude={latitude}&isArrival={isArrival}",
+                RequestFormat = WebMessageFormat.Json,
+                BodyStyle = WebMessageBodyStyle.Wrapped,
+                ResponseFormat = WebMessageFormat.Json
+            )
+        ]
+        Station GetClosestStation(Double longitude, Double latitude, bool isArrival);
+
 
         [OperationContract]
         [WebInvoke
@@ -59,12 +71,12 @@ namespace Routing
         [OperationContract]
         [WebInvoke(
         Method = "GET",
-        UriTemplate = "test",
+        UriTemplate = "stats",
         RequestFormat = WebMessageFormat.Json,
         BodyStyle = WebMessageBodyStyle.Wrapped,
         ResponseFormat = WebMessageFormat.Json
         )]
-        String test();
+        Dictionary<String, String> getStatistics();
 
 
 
@@ -120,7 +132,17 @@ namespace Routing
         public int capacity { get; set; }
     }
 
+    [DataContract]
+    public class ConvertResult
+    {
 
+        [DataMember]
+        public GeometryAddr geometry { get; set; }
+        [DataMember]
+        public PropertiesAddr properties { get; set; }
+        [DataMember]
+        public string type { get; set; }
+    }
 
     [DataContract]
     public class Position
@@ -137,6 +159,5 @@ namespace Routing
             longitude = p2;
         }
     }
-
 
 }

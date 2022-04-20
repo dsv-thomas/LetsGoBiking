@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="t4MniDya84KTe2764GQPUtAc4AqyJ8bnpfA0Raxuark=">
+<SavedWcfConfigurationInformation xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="9.1" CheckSum="xBTXLtMSwfFISDXK9i73x5vmNVVmQbrWSNGU1oN0Bsc=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IRoutingGB">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IRoutingGB" contract="LetsGoBiking.IRoutingGB" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Routing/Service1/" bindingConfiguration="BasicHttpBinding_IRoutingGB">
+    <endpoint name="BasicHttpBinding_IRoutingGB" contract="RoutingService.IRoutingGB" bindingType="basicHttpBinding" address="http://localhost:8733/Design_Time_Addresses/Routing/Service1/" bindingConfiguration="BasicHttpBinding_IRoutingGB">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8733/Design_Time_Addresses/Routing/Service1/</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>BasicHttpBinding_IRoutingGB</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>LetsGoBiking.IRoutingGB</serializedValue>
+          <serializedValue>RoutingService.IRoutingGB</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

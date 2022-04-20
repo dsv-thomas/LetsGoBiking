@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\LetsGoBiking\Reference.cs">
+    <Compile Include="Connected Services\RoutingService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,34 +73,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\LetsGoBiking\item.xsd">
+    <None Include="Connected Services\RoutingService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LetsGoBiking\item1.xsd">
+    <None Include="Connected Services\RoutingService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LetsGoBiking\item2.xsd">
+    <None Include="Connected Services\RoutingService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LetsGoBiking\item3.xsd">
+    <None Include="Connected Services\RoutingService\item3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LetsGoBiking\item4.xsd">
+    <None Include="Connected Services\RoutingService\item4.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\LetsGoBiking\LetsgobikingHeavyClient.LetsGoBiking.ConvertResult.datasource">
+    <None Include="Connected Services\RoutingService\LetsgobikingHeavyClient.RoutingService.ConvertResult.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LetsGoBiking\LetsgobikingHeavyClient.LetsGoBiking.GeoJson.datasource">
+    <None Include="Connected Services\RoutingService\LetsgobikingHeavyClient.RoutingService.GeoJson.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LetsGoBiking\LetsgobikingHeavyClient.LetsGoBiking.Station.datasource">
+    <None Include="Connected Services\RoutingService\LetsgobikingHeavyClient.RoutingService.Station.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LetsGoBiking\LetsgobikingHeavyClient.LetsGoBiking.Travel.datasource">
+    <None Include="Connected Services\RoutingService\LetsgobikingHeavyClient.RoutingService.Travel.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\LetsGoBiking\Service1.wsdl" />
+    <None Include="Connected Services\RoutingService\RoutingGB.wsdl" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -118,19 +118,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\LetsGoBiking\" />
+    <WCFMetadataStorage Include="Connected Services\RoutingService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LetsGoBiking\item.disco" />
+    <None Include="Connected Services\RoutingService\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LetsGoBiking\configuration91.svcinfo" />
+    <None Include="Connected Services\RoutingService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LetsGoBiking\configuration.svcinfo" />
+    <None Include="Connected Services\RoutingService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\LetsGoBiking\Reference.svcmap">
+    <None Include="Connected Services\RoutingService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

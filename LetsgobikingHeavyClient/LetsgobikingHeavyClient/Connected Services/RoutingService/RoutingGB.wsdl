@@ -39,11 +39,11 @@
   <wsdl:message name="IRoutingGB_travel_OutputMessage">
     <wsdl:part name="parameters" element="tns:travelResponse" />
   </wsdl:message>
-  <wsdl:message name="IRoutingGB_test_InputMessage">
-    <wsdl:part name="parameters" element="tns:test" />
+  <wsdl:message name="IRoutingGB_getStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStatistics" />
   </wsdl:message>
-  <wsdl:message name="IRoutingGB_test_OutputMessage">
-    <wsdl:part name="parameters" element="tns:testResponse" />
+  <wsdl:message name="IRoutingGB_getStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatisticsResponse" />
   </wsdl:message>
   <wsdl:portType name="IRoutingGB">
     <wsdl:operation name="GetClosestStation">
@@ -66,9 +66,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/travel" message="tns:IRoutingGB_travel_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/travelResponse" message="tns:IRoutingGB_travel_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="test">
-      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/test" message="tns:IRoutingGB_test_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/testResponse" message="tns:IRoutingGB_test_OutputMessage" />
+    <wsdl:operation name="getStatistics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRoutingGB/getStatistics" message="tns:IRoutingGB_getStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRoutingGB/getStatisticsResponse" message="tns:IRoutingGB_getStatistics_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRoutingGB" type="tns:IRoutingGB">
@@ -118,8 +118,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="test">
-      <soap:operation soapAction="http://tempuri.org/IRoutingGB/test" style="document" />
+    <wsdl:operation name="getStatistics">
+      <soap:operation soapAction="http://tempuri.org/IRoutingGB/getStatistics" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

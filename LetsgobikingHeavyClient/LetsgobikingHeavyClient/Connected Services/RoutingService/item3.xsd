@@ -142,20 +142,6 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Engine" nillable="true" type="tns:Engine" />
-  <xs:complexType name="ArrayOfConvertResult">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConvertResult" nillable="true" type="tns:ConvertResult" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfConvertResult" nillable="true" type="tns:ArrayOfConvertResult" />
-  <xs:complexType name="ConvertResult">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:GeometryAddr" />
-      <xs:element minOccurs="0" name="properties" nillable="true" type="tns:PropertiesAddr" />
-      <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ConvertResult" nillable="true" type="tns:ConvertResult" />
   <xs:complexType name="GeometryAddr">
     <xs:sequence>
       <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="coordinates" nillable="true" type="q8:ArrayOfdouble" />
@@ -188,6 +174,8 @@
       <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="PositionStart" nillable="true" type="q10:Position" />
       <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="stationEnd" nillable="true" type="q11:Station" />
       <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Routing" minOccurs="0" name="stationStart" nillable="true" type="q12:Station" />
+      <xs:element minOccurs="0" name="toEndPoint" nillable="true" type="tns:GeoJson" />
+      <xs:element minOccurs="0" name="toStation" nillable="true" type="tns:GeoJson" />
       <xs:element minOccurs="0" name="travelChoice" nillable="true" type="tns:GeoJson" />
     </xs:sequence>
   </xs:complexType>

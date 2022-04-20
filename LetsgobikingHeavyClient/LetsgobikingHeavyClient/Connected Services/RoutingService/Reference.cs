@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LetsgobikingHeavyClient.LetsGoBiking {
+namespace LetsgobikingHeavyClient.RoutingService {
     using System.Runtime.Serialization;
     using System;
     
@@ -35,13 +35,13 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private int numberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Position positionField;
+        private LetsgobikingHeavyClient.RoutingService.Position positionField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string statusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.TotalStands totalStandsField;
+        private LetsgobikingHeavyClient.RoutingService.TotalStands totalStandsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -106,7 +106,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Position position {
+        public LetsgobikingHeavyClient.RoutingService.Position position {
             get {
                 return this.positionField;
             }
@@ -132,7 +132,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.TotalStands totalStands {
+        public LetsgobikingHeavyClient.RoutingService.TotalStands totalStands {
             get {
                 return this.totalStandsField;
             }
@@ -225,7 +225,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Availabilities availabilitiesField;
+        private LetsgobikingHeavyClient.RoutingService.Availabilities availabilitiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int capacityField;
@@ -241,7 +241,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Availabilities availabilities {
+        public LetsgobikingHeavyClient.RoutingService.Availabilities availabilities {
             get {
                 return this.availabilitiesField;
             }
@@ -414,13 +414,13 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private string typeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Feature[] featuresField;
+        private LetsgobikingHeavyClient.RoutingService.Feature[] featuresField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private double[] bboxField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Metadata metadataField;
+        private LetsgobikingHeavyClient.RoutingService.Metadata metadataField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -446,7 +446,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Feature[] features {
+        public LetsgobikingHeavyClient.RoutingService.Feature[] features {
             get {
                 return this.featuresField;
             }
@@ -472,7 +472,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Metadata metadata {
+        public LetsgobikingHeavyClient.RoutingService.Metadata metadata {
             get {
                 return this.metadataField;
             }
@@ -513,10 +513,10 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private long timestampField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Query queryField;
+        private LetsgobikingHeavyClient.RoutingService.Query queryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Engine engineField;
+        private LetsgobikingHeavyClient.RoutingService.Engine engineField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -568,7 +568,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Query query {
+        public LetsgobikingHeavyClient.RoutingService.Query query {
             get {
                 return this.queryField;
             }
@@ -581,7 +581,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=4)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Engine engine {
+        public LetsgobikingHeavyClient.RoutingService.Engine engine {
             get {
                 return this.engineField;
             }
@@ -619,10 +619,10 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private string typeField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Properties propertiesField;
+        private LetsgobikingHeavyClient.RoutingService.Properties propertiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Geometry geometryField;
+        private LetsgobikingHeavyClient.RoutingService.Geometry geometryField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -661,7 +661,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Properties properties {
+        public LetsgobikingHeavyClient.RoutingService.Properties properties {
             get {
                 return this.propertiesField;
             }
@@ -674,7 +674,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Geometry geometry {
+        public LetsgobikingHeavyClient.RoutingService.Geometry geometry {
             get {
                 return this.geometryField;
             }
@@ -706,16 +706,16 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Segment[] segmentsField;
+        private LetsgobikingHeavyClient.RoutingService.Segment[] segmentsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Extras extrasField;
+        private LetsgobikingHeavyClient.RoutingService.Extras extrasField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Warning[] warningsField;
+        private LetsgobikingHeavyClient.RoutingService.Warning[] warningsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Summary summaryField;
+        private LetsgobikingHeavyClient.RoutingService.Summary summaryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int[] way_pointsField;
@@ -731,7 +731,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Segment[] segments {
+        public LetsgobikingHeavyClient.RoutingService.Segment[] segments {
             get {
                 return this.segmentsField;
             }
@@ -744,7 +744,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Extras extras {
+        public LetsgobikingHeavyClient.RoutingService.Extras extras {
             get {
                 return this.extrasField;
             }
@@ -757,7 +757,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Warning[] warnings {
+        public LetsgobikingHeavyClient.RoutingService.Warning[] warnings {
             get {
                 return this.warningsField;
             }
@@ -770,7 +770,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Summary summary {
+        public LetsgobikingHeavyClient.RoutingService.Summary summary {
             get {
                 return this.summaryField;
             }
@@ -876,7 +876,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Roadaccessrestrictions roadaccessrestrictionsField;
+        private LetsgobikingHeavyClient.RoutingService.Roadaccessrestrictions roadaccessrestrictionsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -889,7 +889,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Roadaccessrestrictions roadaccessrestrictions {
+        public LetsgobikingHeavyClient.RoutingService.Roadaccessrestrictions roadaccessrestrictions {
             get {
                 return this.roadaccessrestrictionsField;
             }
@@ -1020,7 +1020,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private double durationField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Step[] stepsField;
+        private LetsgobikingHeavyClient.RoutingService.Step[] stepsField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1059,7 +1059,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Step[] steps {
+        public LetsgobikingHeavyClient.RoutingService.Step[] steps {
             get {
                 return this.stepsField;
             }
@@ -1296,7 +1296,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private int[][] valuesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Summary[] summaryField;
+        private LetsgobikingHeavyClient.RoutingService.Summary[] summaryField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1322,7 +1322,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public LetsgobikingHeavyClient.LetsGoBiking.Summary[] summary {
+        public LetsgobikingHeavyClient.RoutingService.Summary[] summary {
             get {
                 return this.summaryField;
             }
@@ -1500,7 +1500,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ConvertResult", Namespace="http://schemas.datacontract.org/2004/07/Routing.models")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ConvertResult", Namespace="http://schemas.datacontract.org/2004/07/Routing")]
     [System.SerializableAttribute()]
     public partial class ConvertResult : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
@@ -1508,10 +1508,10 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.GeometryAddr geometryField;
+        private LetsgobikingHeavyClient.RoutingService.GeometryAddr geometryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.PropertiesAddr propertiesField;
+        private LetsgobikingHeavyClient.RoutingService.PropertiesAddr propertiesField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string typeField;
@@ -1527,7 +1527,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.GeometryAddr geometry {
+        public LetsgobikingHeavyClient.RoutingService.GeometryAddr geometry {
             get {
                 return this.geometryField;
             }
@@ -1540,7 +1540,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.PropertiesAddr properties {
+        public LetsgobikingHeavyClient.RoutingService.PropertiesAddr properties {
             get {
                 return this.propertiesField;
             }
@@ -1640,37 +1640,38 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertiesAddr", Namespace="http://schemas.datacontract.org/2004/07/Routing.models")]
     [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Station))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Position))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.TotalStands))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Availabilities))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Station[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Station))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Position))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.TotalStands))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Availabilities))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Station[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.ConvertResult[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.ConvertResult))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(double[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(int[]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(int[][]))]
     [System.Runtime.Serialization.KnownTypeAttribute(typeof(double[][]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.GeoJson))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Feature[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Feature))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Properties))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Segment[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Segment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Step[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Step))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Extras))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Roadaccessrestrictions))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Summary[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Summary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Warning[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Warning))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Geometry))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Metadata))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Query))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Engine))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.ConvertResult[]))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.ConvertResult))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.GeometryAddr))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.LetsGoBiking.Travel))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(System.Collections.Generic.Dictionary<string, string>))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.GeoJson))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Feature[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Feature))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Properties))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Segment[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Segment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Step[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Step))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Extras))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Roadaccessrestrictions))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Summary[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Summary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Warning[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Warning))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Geometry))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Metadata))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Query))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Engine))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.GeometryAddr))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(LetsgobikingHeavyClient.RoutingService.Travel))]
     public partial class PropertiesAddr : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -1930,19 +1931,25 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Position PositionEndField;
+        private LetsgobikingHeavyClient.RoutingService.Position PositionEndField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Position PositionStartField;
+        private LetsgobikingHeavyClient.RoutingService.Position PositionStartField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Station stationEndField;
+        private LetsgobikingHeavyClient.RoutingService.Station stationEndField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.Station stationStartField;
+        private LetsgobikingHeavyClient.RoutingService.Station stationStartField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private LetsgobikingHeavyClient.LetsGoBiking.GeoJson travelChoiceField;
+        private LetsgobikingHeavyClient.RoutingService.GeoJson toEndPointField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private LetsgobikingHeavyClient.RoutingService.GeoJson toStationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private LetsgobikingHeavyClient.RoutingService.GeoJson travelChoiceField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1955,7 +1962,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Position PositionEnd {
+        public LetsgobikingHeavyClient.RoutingService.Position PositionEnd {
             get {
                 return this.PositionEndField;
             }
@@ -1968,7 +1975,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Position PositionStart {
+        public LetsgobikingHeavyClient.RoutingService.Position PositionStart {
             get {
                 return this.PositionStartField;
             }
@@ -1981,7 +1988,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Station stationEnd {
+        public LetsgobikingHeavyClient.RoutingService.Station stationEnd {
             get {
                 return this.stationEndField;
             }
@@ -1994,7 +2001,7 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.Station stationStart {
+        public LetsgobikingHeavyClient.RoutingService.Station stationStart {
             get {
                 return this.stationStartField;
             }
@@ -2007,7 +2014,33 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public LetsgobikingHeavyClient.LetsGoBiking.GeoJson travelChoice {
+        public LetsgobikingHeavyClient.RoutingService.GeoJson toEndPoint {
+            get {
+                return this.toEndPointField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.toEndPointField, value) != true)) {
+                    this.toEndPointField = value;
+                    this.RaisePropertyChanged("toEndPoint");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public LetsgobikingHeavyClient.RoutingService.GeoJson toStation {
+            get {
+                return this.toStationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.toStationField, value) != true)) {
+                    this.toStationField = value;
+                    this.RaisePropertyChanged("toStation");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public LetsgobikingHeavyClient.RoutingService.GeoJson travelChoice {
             get {
                 return this.travelChoiceField;
             }
@@ -2030,53 +2063,53 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="LetsGoBiking.IRoutingGB")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="RoutingService.IRoutingGB")]
     public interface IRoutingGB {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/GetClosestStation", ReplyAction="http://tempuri.org/IRoutingGB/GetClosestStationResponse")]
-        LetsgobikingHeavyClient.LetsGoBiking.Station GetClosestStation(double longitude, double latitude);
+        LetsgobikingHeavyClient.RoutingService.Station GetClosestStation(double longitude, double latitude, bool isArrival);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/GetClosestStation", ReplyAction="http://tempuri.org/IRoutingGB/GetClosestStationResponse")]
-        System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Station> GetClosestStationAsync(double longitude, double latitude);
+        System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Station> GetClosestStationAsync(double longitude, double latitude, bool isArrival);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getAllStation", ReplyAction="http://tempuri.org/IRoutingGB/getAllStationResponse")]
-        LetsgobikingHeavyClient.LetsGoBiking.Station[] getAllStation();
+        LetsgobikingHeavyClient.RoutingService.Station[] getAllStation();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getAllStation", ReplyAction="http://tempuri.org/IRoutingGB/getAllStationResponse")]
-        System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Station[]> getAllStationAsync();
+        System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Station[]> getAllStationAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getRoute", ReplyAction="http://tempuri.org/IRoutingGB/getRouteResponse")]
-        LetsgobikingHeavyClient.LetsGoBiking.GeoJson getRoute(string llP1, string llP2, string profile);
+        LetsgobikingHeavyClient.RoutingService.GeoJson getRoute(string llP1, string llP2, string profile);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getRoute", ReplyAction="http://tempuri.org/IRoutingGB/getRouteResponse")]
-        System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.GeoJson> getRouteAsync(string llP1, string llP2, string profile);
+        System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.GeoJson> getRouteAsync(string llP1, string llP2, string profile);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/convert", ReplyAction="http://tempuri.org/IRoutingGB/convertResponse")]
-        LetsgobikingHeavyClient.LetsGoBiking.ConvertResult[] convert(string address);
+        LetsgobikingHeavyClient.RoutingService.ConvertResult[] convert(string address);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/convert", ReplyAction="http://tempuri.org/IRoutingGB/convertResponse")]
-        System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.ConvertResult[]> convertAsync(string address);
+        System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.ConvertResult[]> convertAsync(string address);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/travel", ReplyAction="http://tempuri.org/IRoutingGB/travelResponse")]
-        LetsgobikingHeavyClient.LetsGoBiking.Travel travel(string startpoint, string endpoint);
+        LetsgobikingHeavyClient.RoutingService.Travel travel(string startpoint, string endpoint);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/travel", ReplyAction="http://tempuri.org/IRoutingGB/travelResponse")]
-        System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Travel> travelAsync(string startpoint, string endpoint);
+        System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Travel> travelAsync(string startpoint, string endpoint);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/test", ReplyAction="http://tempuri.org/IRoutingGB/testResponse")]
-        string test();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getStatistics", ReplyAction="http://tempuri.org/IRoutingGB/getStatisticsResponse")]
+        System.Collections.Generic.Dictionary<string, string> getStatistics();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/test", ReplyAction="http://tempuri.org/IRoutingGB/testResponse")]
-        System.Threading.Tasks.Task<string> testAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRoutingGB/getStatistics", ReplyAction="http://tempuri.org/IRoutingGB/getStatisticsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getStatisticsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IRoutingGBChannel : LetsgobikingHeavyClient.LetsGoBiking.IRoutingGB, System.ServiceModel.IClientChannel {
+    public interface IRoutingGBChannel : LetsgobikingHeavyClient.RoutingService.IRoutingGB, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class RoutingGBClient : System.ServiceModel.ClientBase<LetsgobikingHeavyClient.LetsGoBiking.IRoutingGB>, LetsgobikingHeavyClient.LetsGoBiking.IRoutingGB {
+    public partial class RoutingGBClient : System.ServiceModel.ClientBase<LetsgobikingHeavyClient.RoutingService.IRoutingGB>, LetsgobikingHeavyClient.RoutingService.IRoutingGB {
         
         public RoutingGBClient() {
         }
@@ -2097,52 +2130,52 @@ namespace LetsgobikingHeavyClient.LetsGoBiking {
                 base(binding, remoteAddress) {
         }
         
-        public LetsgobikingHeavyClient.LetsGoBiking.Station GetClosestStation(double longitude, double latitude) {
-            return base.Channel.GetClosestStation(longitude, latitude);
+        public LetsgobikingHeavyClient.RoutingService.Station GetClosestStation(double longitude, double latitude, bool isArrival) {
+            return base.Channel.GetClosestStation(longitude, latitude, isArrival);
         }
         
-        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Station> GetClosestStationAsync(double longitude, double latitude) {
-            return base.Channel.GetClosestStationAsync(longitude, latitude);
+        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Station> GetClosestStationAsync(double longitude, double latitude, bool isArrival) {
+            return base.Channel.GetClosestStationAsync(longitude, latitude, isArrival);
         }
         
-        public LetsgobikingHeavyClient.LetsGoBiking.Station[] getAllStation() {
+        public LetsgobikingHeavyClient.RoutingService.Station[] getAllStation() {
             return base.Channel.getAllStation();
         }
         
-        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Station[]> getAllStationAsync() {
+        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Station[]> getAllStationAsync() {
             return base.Channel.getAllStationAsync();
         }
         
-        public LetsgobikingHeavyClient.LetsGoBiking.GeoJson getRoute(string llP1, string llP2, string profile) {
+        public LetsgobikingHeavyClient.RoutingService.GeoJson getRoute(string llP1, string llP2, string profile) {
             return base.Channel.getRoute(llP1, llP2, profile);
         }
         
-        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.GeoJson> getRouteAsync(string llP1, string llP2, string profile) {
+        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.GeoJson> getRouteAsync(string llP1, string llP2, string profile) {
             return base.Channel.getRouteAsync(llP1, llP2, profile);
         }
         
-        public LetsgobikingHeavyClient.LetsGoBiking.ConvertResult[] convert(string address) {
+        public LetsgobikingHeavyClient.RoutingService.ConvertResult[] convert(string address) {
             return base.Channel.convert(address);
         }
         
-        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.ConvertResult[]> convertAsync(string address) {
+        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.ConvertResult[]> convertAsync(string address) {
             return base.Channel.convertAsync(address);
         }
         
-        public LetsgobikingHeavyClient.LetsGoBiking.Travel travel(string startpoint, string endpoint) {
+        public LetsgobikingHeavyClient.RoutingService.Travel travel(string startpoint, string endpoint) {
             return base.Channel.travel(startpoint, endpoint);
         }
         
-        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.LetsGoBiking.Travel> travelAsync(string startpoint, string endpoint) {
+        public System.Threading.Tasks.Task<LetsgobikingHeavyClient.RoutingService.Travel> travelAsync(string startpoint, string endpoint) {
             return base.Channel.travelAsync(startpoint, endpoint);
         }
         
-        public string test() {
-            return base.Channel.test();
+        public System.Collections.Generic.Dictionary<string, string> getStatistics() {
+            return base.Channel.getStatistics();
         }
         
-        public System.Threading.Tasks.Task<string> testAsync() {
-            return base.Channel.testAsync();
+        public System.Threading.Tasks.Task<System.Collections.Generic.Dictionary<string, string>> getStatisticsAsync() {
+            return base.Channel.getStatisticsAsync();
         }
     }
 }

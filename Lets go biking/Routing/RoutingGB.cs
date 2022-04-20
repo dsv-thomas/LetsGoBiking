@@ -17,6 +17,9 @@ namespace Routing
         private static Openrouteservice openrouteservice = new Openrouteservice();
         private static ApiAdresse apiAdresse = new ApiAdresse();
         private List<Station> stationsLongCache = jcDecaux.GetStations().Result;
+        public static int CountTotalRoute = 0;
+        public static Dictionary<string, long> StationsTopList = new Dictionary<string, long>();
+        public static double MoyResponseTime = 0;
 
         public RoutingGB()
         {
@@ -32,13 +35,16 @@ namespace Routing
             Station minRoot = stationsLongCache[0];
             foreach (Station root in stationsLongCache.OrderBy(test => new GeoCoordinate(test.position.latitude, test.position.longitude).GetDistanceTo(initialPosition)))
             {
-
                if(isValidStation(root.number, isArrival))
                {
+                    StationsTopList.TryGetValue(root.name, out var currentCount); ;
+                    StationsTopList[root.name] = currentCount + 1;
                     return root;
                }
 
             }
+            StationsTopList.TryGetValue(minRoot.name, out var currentCount2); ;
+            StationsTopList[minRoot.name] = currentCount2 + 1;
             return minRoot;
         }
 
@@ -63,7 +69,7 @@ namespace Routing
             GeoJson toStation = getRoute(startPoint, (startSation.position.longitude.ToString().Replace(",", ".") + "," + startSation.position.latitude.ToString().Replace(",", ".")), "foot-walking");
             GeoJson toEnd = getRoute((endSation.position.longitude.ToString().Replace(",", ".") + "," + endSation.position.latitude.ToString().Replace(",", ".")), endPoint, "foot-walking");
 
-            if (walkingTravel.features[0].properties.segments[0].duration < cyclingTravel.features[0].properties.segments[0].duration)
+            if (walkingTravel.features[0].properties.segments[0].duration < cyclingTravel.features[0].properties.segments[0].duration + toStation.features[0].properties.segments[0].duration + toEnd.features[0].properties.segments[0].duration)
             {
                 return new Travel(position, position2, null, null, walkingTravel, toStation, toEnd);
             }
@@ -80,22 +86,33 @@ namespace Routing
 
         public GeoJson getRoute(String llP1, String llP2, String profile)
         {
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
+            CountTotalRoute++;
             string[] P1 = llP1.Split(',');
             string[] P2 = llP2.Split(',');
             Position position = new Position(Convert.ToDouble(P1[0], CultureInfo.InvariantCulture), Convert.ToDouble(P1[1], CultureInfo.InvariantCulture));
             Position position2 = new Position(Convert.ToDouble(P2[0], CultureInfo.InvariantCulture), Convert.ToDouble(P2[1], CultureInfo.InvariantCulture));
-            return openrouteservice.GetRoute(position, position2, profile).Result;
+            GeoJson geoJson = openrouteservice.GetRoute(position, position2, profile).Result;
+            watch.Stop();
+            MoyResponseTime = (MoyResponseTime + watch.ElapsedMilliseconds) / 2;
+            return geoJson;
         }
 
 
-
-        public String test()
+        public Dictionary<String, String> getStatistics()
         {
-            return "test";
+     
+            Dictionary<String, String> dict = new Dictionary<String, String>();
+            dict.Add("TotalRoute", CountTotalRoute.ToString());
+            dict.Add("TopStation", StationsTopList.FirstOrDefault(x => x.Value == StationsTopList.Values.Max()).Key);
+            dict.Add("MoyResponseTime", MoyResponseTime.ToString());
+            return dict;
         }
 
         public List<ConvertResult> convert(string address)
         {
+            Console.WriteLine("Convert");
             return apiAdresse.convertAddress(address).Result;
         }
 

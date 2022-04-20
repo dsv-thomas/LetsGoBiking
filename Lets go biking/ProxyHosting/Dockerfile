@@ -1,5 +1,5 @@
-FROM mcr.microsoft.com/dotnet/runtime:6.0-bullseye-slim
+FROM mcr.microsoft.com/dotnet/framework/runtime:4.8
 WORKDIR /app
 EXPOSE 8081
 COPY bin/Debug/ .
-ENTRYPOINT ["/app/ProxyHosting.exe"]
+ENTRYPOINT ["ProxyHosting.exe"]
