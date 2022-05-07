@@ -16,15 +16,42 @@ Thomas De Sousa Vieira
 ### Routing et Proxy
 Lancer visual Studio en administrateur, ouvrir le projet "Lets go biking.sln". Ce projet réunit les solutions "Routing", "ProxyCache".
 Pour lancer le projet il faut cliquer sur la fleche verte (sans débogage).
+![image](https://user-images.githubusercontent.com/59823412/167250302-7c5fde3c-1545-4435-848b-7bbe8215eb4e.png)
+
 Cela lancera les projet en selfhosted (image ci-dessous).
+![image](https://user-images.githubusercontent.com/59823412/167250250-3a7757a2-e380-4f8e-94ec-76fc040e16cc.png)
+
 
 ### Web application
 
 Lancer le fichier "lightClient/index.html" dans un navigateur.
 
+
+1. Pour rechercher une adresse, rentrer une adresse dans "Départ" et appuyer sur Entrée pour lancer la recherche. Puis selectionner la bonne adresse.
+2. Séléctionner l'arrivée
+3. Rechercher le trajet
+
+![image](https://user-images.githubusercontent.com/59823412/167250602-a2e1b61b-3ec3-442a-97a6-7d8677741c40.png)
+
+![image](https://user-images.githubusercontent.com/59823412/167250644-76005a94-6f85-4f02-8e4e-6ad088c195f8.png)
+
+#### Exemple de recherches
+
+Trajet marche :
+- **Départ** leclerc lyon
+- **Arrivée** rue des girondins lyon
+
+Trajet en vélo:
+- **Départ** leclerc lyon
+- **Arrivée** pont winston churchill lyon
+
 ### Heavy client
 
 Lancer Visual Studio et ouvrir le projet "LetsgobikingHeavyClient.sln". Lancer le projet en cliquant sur la flèche verte.
+![image](https://user-images.githubusercontent.com/59823412/167250747-98d38e83-47af-47ff-9372-ec1d35290df0.png)
+
+![image](https://user-images.githubusercontent.com/59823412/167250759-cfc76d27-c6ea-440d-af8b-e234f1f9a26c.png)
+
 
 ## Docker 
 
