@@ -41,7 +41,6 @@ document.getElementById("result-label").hidden = true;
 const node = document.getElementsByClassName("startLocation")[0];
 node.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
-        console.log("test");
         editSE = true;
         findLatLong(node.value);
     }
@@ -49,7 +48,6 @@ node.addEventListener("keyup", function (event) {
 const node2 = document.getElementsByClassName("endLocation")[0];
 node2.addEventListener("keyup", function (event) {
     if (event.key === "Enter") {
-        console.log("endLocation");
         editSE = false;
         findLatLong(node2.value);
     }
@@ -102,9 +100,6 @@ function selectAddress(e) {
         endPoint = adresses[e.currentTarget.id].geometry.coordinates;
     }
 
-    console.log("startPoint")
-    console.log(startPoint)
-    console.log(endPoint)
 
     map.getLayers().getArray()
         .filter(layer => layer.get('name') === 'pointer' + editSE)
@@ -170,11 +165,9 @@ function generateMarker(station) {
 
 
 function cardStation(card) {
-    console.log("test")
     const cards = document.getElementById("cards");
     const card_station = document.getElementsByClassName("card-station-template")[0];
     var cloned = card_station.cloneNode(true);
-    //card_station.setAttribute("id", card.number)
     cloned.classList.remove("hidden");
     cloned.classList.remove("card-station-template");
     cloned.classList.add("card-station");
@@ -222,12 +215,9 @@ function generateTravel() {
     if (this.status !== 200) {
         console.log("Recherche d'adresse impossible")
     } else {
-        //Remove old cards
         const cards = document.getElementById("cards");
         cards.innerHTML = "";
         const results = JSON.parse(this.responseText);
-        console.log(results);
-        console.log(results.travelResult.travelChoice);
         routeOverlay(results.travelResult.travelChoice, lineStyle)
         if (results.travelResult.stationStart != undefined) {
             cardStation(results.travelResult.stationStart);

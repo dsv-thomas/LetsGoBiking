@@ -35,12 +35,12 @@ namespace Routing
             Station minRoot = stationsLongCache[0];
             foreach (Station root in stationsLongCache.OrderBy(test => new GeoCoordinate(test.position.latitude, test.position.longitude).GetDistanceTo(initialPosition)))
             {
-               if(isValidStation(root.number, isArrival))
-               {
+                if (isValidStation(root.number, isArrival))
+                {
                     StationsTopList.TryGetValue(root.name, out var currentCount); ;
                     StationsTopList[root.name] = currentCount + 1;
                     return root;
-               }
+                }
 
             }
             StationsTopList.TryGetValue(minRoot.name, out var currentCount2); ;
@@ -102,7 +102,7 @@ namespace Routing
 
         public Dictionary<String, String> getStatistics()
         {
-     
+
             Dictionary<String, String> dict = new Dictionary<String, String>();
             dict.Add("TotalRoute", CountTotalRoute.ToString());
             dict.Add("TopStation", StationsTopList.FirstOrDefault(x => x.Value == StationsTopList.Values.Max()).Key);
