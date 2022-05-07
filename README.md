@@ -15,7 +15,7 @@ Thomas De Sousa Vieira
 
 ### Routing et Proxy
 Lancer visual Studio en administrateur, ouvrir le projet "Lets go biking.sln". Ce projet réunit les solutions "Routing", "ProxyCache".
-Pour lancer le projet il faut cliquer sur la fleche verte (sans débogage).
+Pour lancer le projet, il faut cliquer sur la flèche verte (sans débogage).
 ![image](https://user-images.githubusercontent.com/59823412/167250302-7c5fde3c-1545-4435-848b-7bbe8215eb4e.png)
 
 Cela lancera les projet en selfhosted (image ci-dessous).
@@ -26,9 +26,8 @@ Cela lancera les projet en selfhosted (image ci-dessous).
 
 Lancer le fichier "lightClient/index.html" dans un navigateur.
 
-
-1. Pour rechercher une adresse, rentrer une adresse dans "Départ" et appuyer sur Entrée pour lancer la recherche. Puis selectionner la bonne adresse.
-2. Séléctionner l'arrivée
+1. Pour rechercher une adresse, rentrer une adresse dans "Départ" et appuyer sur Entrée pour lancer la recherche. Puis sélectionner la bonne adresse.
+2. Sélectionner l'arrivée
 3. Rechercher le trajet
 
 ![image](https://user-images.githubusercontent.com/59823412/167250602-a2e1b61b-3ec3-442a-97a6-7d8677741c40.png)
@@ -55,8 +54,7 @@ Lancer Visual Studio et ouvrir le projet "LetsgobikingHeavyClient.sln". Lancer l
 
 ## Docker 
 
-Le projet peut être conteneuriser grâce aux DockerFile.
-
+Le projet peut être conteneurisé grâce aux DockerFile.
 
 ## EndPoints API disponibles
 
