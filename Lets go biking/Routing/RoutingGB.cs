@@ -9,10 +9,8 @@ using System.ServiceModel.Web;
 
 namespace Routing
 {
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class RoutingGB : IRoutingGB
     {
-
         private static JCDecaux jcDecaux = new JCDecaux();
         private static Openrouteservice openrouteservice = new Openrouteservice();
         private static ApiAdresse apiAdresse = new ApiAdresse();
@@ -56,6 +54,7 @@ namespace Routing
 
         public Travel travel(String startPoint, String endPoint)
         {
+            Console.WriteLine("Search for a travel with start position : " + startPoint + " end position : " + endPoint);
             string[] P1 = startPoint.Split(',');
             string[] P2 = endPoint.Split(',');
             Position position = new Position(Convert.ToDouble(P1[0], CultureInfo.InvariantCulture), Convert.ToDouble(P1[1], CultureInfo.InvariantCulture));
@@ -86,6 +85,7 @@ namespace Routing
 
         public GeoJson getRoute(String llP1, String llP2, String profile)
         {
+            Console.WriteLine("Search for a route with start position : "+llP1 + " end position : " + llP2);
             var watch = new System.Diagnostics.Stopwatch();
             watch.Start();
             CountTotalRoute++;
@@ -102,7 +102,7 @@ namespace Routing
 
         public Dictionary<String, String> getStatistics()
         {
-
+            Console.WriteLine("Obtaining statistics");
             Dictionary<String, String> dict = new Dictionary<String, String>();
             dict.Add("TotalRoute", CountTotalRoute.ToString());
             dict.Add("TopStation", StationsTopList.FirstOrDefault(x => x.Value == StationsTopList.Values.Max()).Key);
@@ -112,7 +112,7 @@ namespace Routing
 
         public List<ConvertResult> convert(string address)
         {
-            Console.WriteLine("Convert");
+            Console.WriteLine("Convert address : " + address);
             return apiAdresse.convertAddress(address).Result;
         }
 

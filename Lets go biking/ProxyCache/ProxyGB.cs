@@ -28,6 +28,7 @@ namespace ProxyCache
 
         public Station GetStationId(int StationId)
         {
+            Console.WriteLine("Proxy get station id : " + StationId);
             Dictionary<String, String> map = new Dictionary<String, String>();
             map.Add("stationId", StationId.ToString());
             return cacheJCDecaux.Get("/stations/" + StationId.ToString() + "?contract=lyon", EXPIRATION_TIME, map).station;
@@ -35,6 +36,7 @@ namespace ProxyCache
 
         public List<FeatureAddr> convert(String address)
         {
+            Console.WriteLine("Proxy convert : " + address);
             Dictionary<String, String> map = new Dictionary<String, String>();
             map.Add("address", address);
             return cacheApiAdresse.Get("/convert?address=" + address, EXPIRATION_TIME_LONG, map).addressList;

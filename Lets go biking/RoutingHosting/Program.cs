@@ -12,7 +12,6 @@ namespace RoutingHosting
     {
         static void Main(string[] args)
         {
-            //Create ServiceHost
             ServiceHost host = new ServiceHost(typeof(RoutingGB));
             host.Open();
 

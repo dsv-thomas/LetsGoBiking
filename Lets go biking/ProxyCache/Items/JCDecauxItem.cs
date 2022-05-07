@@ -35,6 +35,7 @@ namespace ProxyCache.Items
 
         public async Task<List<Station>> GetStations()
         {
+            Console.WriteLine("Get all stations API");
             HttpResponseMessage response = await client.GetAsync("https://api.jcdecaux.com/vls/v3/stations" + "?apiKey=" + apiKey);
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
@@ -49,6 +50,7 @@ namespace ProxyCache.Items
 
         public async Task<Station> GetStation(int StationId)
         {
+            Console.WriteLine("Get station API JCDECAUX : " + StationId);
             HttpResponseMessage response = await client.GetAsync("https://api.jcdecaux.com/vls/v3/stations/"+StationId + "?contract=lyon&apiKey=" + apiKey);
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();

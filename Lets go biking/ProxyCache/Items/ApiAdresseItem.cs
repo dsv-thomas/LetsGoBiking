@@ -28,6 +28,7 @@ namespace ProxyCache.Items
 
         public async Task<List<FeatureAddr>> ConvertAddress(String address)
         {
+            Console.WriteLine("Call external API convert Address : " + address);
             HttpResponseMessage response = await client.GetAsync("https://api-adresse.data.gouv.fr/search/?q=" + address);
             response.EnsureSuccessStatusCode();
             string responseBody = await response.Content.ReadAsStringAsync();
