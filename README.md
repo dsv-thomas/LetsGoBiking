@@ -7,7 +7,7 @@ Thomas De Sousa Vieira
 
 - LightClient : Application web
 - Routing : API pour l'application
-- ProxyCache : Serveur intermédiaire entre Routing et les apis externes
+- ProxyCache : Serveur intermédiaire entre Routing et les apis externes (communication REST)
 - LetsgobikingHeavyClient : Client lourd permettant d'effectuer des recherches et d'obtenir des statistiques
 
 
