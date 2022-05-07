@@ -5,10 +5,10 @@ Thomas De Sousa Vieira
 
 ## Composants du projet
 
-** LightClient ** : Application web
-** Routing ** : API pour l'application
-** ProxyCache ** : Serveur intermédiaire entre Routing et les apis externes
-** LetsgobikingHeavyClient ** : Client lourd permettant d'effectuer des recherches et d'obtenir des statistiques
+- LightClient : Application web
+- Routing : API pour l'application
+- ProxyCache : Serveur intermédiaire entre Routing et les apis externes
+- LetsgobikingHeavyClient : Client lourd permettant d'effectuer des recherches et d'obtenir des statistiques
 
 
 ## Pour lancer le projet
